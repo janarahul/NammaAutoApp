@@ -44,6 +44,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
@@ -122,12 +123,20 @@ public class MainActivity extends SampleActivityBase implements OnMapReadyCallba
         // Register a listener to receive callbacks when a place has been selected or an error has
         // occurred.
         autocompleteFragment.setHint("Enter Origin");
+        autocompleteFragment.setBoundsBias(new LatLngBounds(
+                new LatLng(12.718188, 77.559477),
+                new LatLng(13.171149, 77.597585)));
+
         autocompleteFragment.setOnPlaceSelectedListener(this);
 
         PlaceAutocompleteFragment autocompleteFragment1 = (PlaceAutocompleteFragment)
                 getFragmentManager().findFragmentById(R.id.autocomplete_fragment1);
 
         autocompleteFragment1.setHint("Enter destination");
+        autocompleteFragment1.setBoundsBias(new LatLngBounds(
+                new LatLng(12.718188, 77.559477),
+                new LatLng(13.171149, 77.597585)));
+
         autocompleteFragment1.setOnPlaceSelectedListener(this);
 
 
