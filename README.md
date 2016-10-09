@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # NammaAuto
 
 This App computes the fare which user has to pay for a auto ride in Bangalore 
@@ -9,6 +9,5 @@ Uses APIs
 2)Google Directions API
 and
 Google PlaceAutoCompleteFragment
-=======
-# NammaAutotesting
->>>>>>> github/master
+
+
